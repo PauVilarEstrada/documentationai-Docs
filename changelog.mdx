@@ -1,0 +1,190 @@
+---
+title: Changelog
+description: Track recent updates, improvements, and fixes across documentation or product releases. Use this page to see what changed most recently and what to look for next.
+---
+## Overview
+
+This starter-kit changelog helps you track recent releases, improvements, and fixes in one place. Use it as a template for Pau Vilar or adapt it for any project documentation site.
+
+You can use the entries below to summarize what changed, why it changed, and what readers should do next. Keep the language short, specific, and easy to scan.
+
+<Callout kind="tip">
+
+Treat this page as the single source of truth for release history. Add new entries at the top, keep older entries below, and link related guides when a change affects usage.
+
+</Callout>
+
+## Recent releases
+
+<Update label="2026-10-27" description="v1.3.0" tags={["feature", "improvement"]}>
+
+### New Features
+
+- Added a cleaner release summary format so you can scan changes faster.
+- Introduced grouped sections for features, fixes, and behavior changes.
+- Added sample links to help you connect release notes with other documentation pages.
+
+### Improvements
+
+- Reworded the changelog intro to better fit starter-kit documentation.
+- Improved readability by keeping each entry focused on a single version.
+- Standardized headings so every update follows the same structure.
+
+### Bug Fixes
+
+- Fixed inconsistent phrasing in older template text.
+- Corrected spacing around example components for MDX compatibility.
+
+</Update>
+
+<Update label="2026-09-18" description="v1.2.0" tags={["feature", "bugfix"]}>
+
+### New Features
+
+- Added support for documenting behavior changes alongside standard releases.
+- Expanded the template with example sections you can reuse in product docs.
+
+### Bug Fixes
+
+- Fixed missing structure guidance for new contributors.
+- Resolved formatting issues in sample markdown lists.
+
+### Deprecated Items
+
+- Deprecated vague release notes that do not explain user impact.
+- Deprecated mixed-format entries that combine multiple release themes without clear labels.
+
+</Update>
+
+<Update label="2026-08-05" description="v1.1.0" tags={["improvement"]}>
+
+### Improvements
+
+- Improved the default changelog layout for faster editing.
+- Clarified how to write concise release notes for a documentation-first workflow.
+- Added guidance that works well for both product launches and doc updates.
+
+### Behavior Changes
+
+- Release entries now read top to bottom from newest to oldest.
+- Section labels now use consistent casing for easier scanning.
+
+</Update>
+
+## How to write a strong entry
+
+<Steps>
+  <Step title="Summarize the release" icon="book-open">
+
+Write one short paragraph that explains what changed and why it matters. Keep it focused on the user impact, not internal implementation details.
+
+  </Step>
+  <Step title="Group the changes" icon="settings">
+
+Split the release into clear sections such as New Features, Improvements, Bug Fixes, Behavior Changes, and Deprecated Items.
+
+  </Step>
+  <Step title="Add examples" icon="code">
+
+Include concrete details when something changed in a workflow, API response, or UI behavior so readers know what to expect.
+
+  </Step>
+  <Step title="Link the next action" icon="arrow-right">
+
+End with a short note that points readers to the next doc page, migration step, or configuration update.
+
+  </Step>
+</Steps>
+
+## Release note patterns
+
+<Tabs>
+  <Tab title="Feature release" icon="zap">
+
+Use this pattern when you ship something new that users can try right away.
+
+```markdown
+### New Features
+
+- Added bulk import for project notes.
+- Added a dashboard card for recent activity.
+```
+
+  </Tab>
+  <Tab title="Fix release" icon="x-circle">
+
+Use this pattern when you mainly ship corrections and reliability improvements.
+
+```markdown
+### Bug Fixes
+
+- Fixed an issue where saved filters reset after refresh.
+- Resolved a layout shift in the sidebar on smaller screens.
+```
+
+  </Tab>
+  <Tab title="Behavior change" icon="shield">
+
+Use this pattern when a workflow changes but the feature still exists.
+
+```markdown
+### Behavior Changes
+
+- Exported files now default to UTF-8 encoding.
+- Search results now sort by relevance first, then by recency.
+```
+
+  </Tab>
+</Tabs>
+
+## Example changelog entry
+
+<CodeGroup tabs="Markdown,JSON">
+  ```markdown
+### 2026-10-27 — v1.3.0
+
+#### New Features
+
+- Added release tags for faster filtering.
+- Added consistent release summaries.
+
+#### Improvements
+
+- Improved template readability.
+- Simplified section order.
+```
+
+  ```json
+{
+  "label": "2026-10-27",
+  "description": "v1.3.0",
+  "tags": ["feature", "improvement"]
+}
+```
+</CodeGroup>
+
+## What to watch for next
+
+<Columns cols={3}>
+  <Card title="New releases" icon="rocket" href="/quickstart">
+
+Use this area for the latest version updates and rollout notes.
+
+  </Card>
+  <Card title="Documentation changes" icon="book-open" href="/introduction">
+
+Use this area for edits to guides, setup steps, and page structure.
+
+  </Card>
+  <Card title="Architecture notes" icon="database" href="/authentication">
+
+Use this area for important behavior changes and integration updates.
+
+  </Card>
+</Columns>
+
+<Callout kind="info">
+
+This is a starter-kit template. You should customize the dates, version numbers, section names, and release cadence to match your project.
+
+</Callout>

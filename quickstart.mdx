@@ -1,0 +1,164 @@
+---
+title: Getting Started
+description: Set up your environment and get to a working first result quickly. This page is designed to help new users understand the minimum steps needed to begin using the product or project.
+---
+
+## Overview
+
+This starter kit helps you set up Pau Vilar documentation in a predictable way, then customize it for your own project. You will learn the minimum steps to prepare your environment, run the project locally, and confirm that everything works.
+
+<Callout kind="info">
+This is sample documentation meant to get you to a first result quickly. Replace the examples with your own product details, commands, and endpoints.
+</Callout>
+
+## Prerequisites
+
+Before you begin, make sure you have the basics installed on your machine.
+
+<Columns cols={3}>
+  <Card title="Node.js" icon="terminal" href="#installation">
+    Use a current LTS release for local development and build tooling.
+  </Card>
+  <Card title="Package Manager" icon="package" href="#installation">
+    Use npm, yarn, or pnpm so you can install dependencies consistently.
+  </Card>
+  <Card title="Editor" icon="code" href="#local-development-basics">
+    Use an editor with TypeScript and Markdown support for the smoothest workflow.
+  </Card>
+</Columns>
+
+You should also have access to your project files and a terminal. If your setup includes environment variables, keep a safe placeholder file ready, such as `.env.local`.
+
+## Setup
+
+Follow these steps to install the project and start the local development server.
+
+<Steps>
+  <Step title="Install dependencies" icon="download">
+    Run the package manager command that matches your team standard.
+
+    ````bash
+    npm install
+    ````
+
+    If your team uses a different lockfile, you can swap in the equivalent command without changing the rest of the workflow.
+  </Step>
+  <Step title="Create your environment file" icon="settings">
+    Copy your example variables into a local file and adjust the values for your machine.
+
+    ````bash
+    cp .env.example .env.local
+    ````
+
+    Use placeholders such as `YOUR_API_KEY` or `YOUR_TOKEN` while you are testing locally.
+  </Step>
+  <Step title="Start the development server" icon="play-circle">
+    Launch the app and open it in your browser.
+
+    ````bash
+    npm run dev
+    ````
+
+    After the server starts, open `http://localhost:3000` in your browser.
+  </Step>
+</Steps>
+
+## First run
+
+Once the app is running, verify the first screen and confirm that your configuration is loaded.
+
+<CodeGroup tabs="TypeScript,Bash,JSON">
+  ```typescript
+  type AppConfig = {
+    projectName: string;
+    apiBaseUrl: string;
+  };
+
+  const config: AppConfig = {
+    projectName: "Pau Vilar",
+    apiBaseUrl: "https://api.example.com"
+  };
+
+  console.log(`Starting ${config.projectName} with ${config.apiBaseUrl}`);
+  ```
+
+  ```bash
+  curl https://api.example.com/health
+  ```
+
+  ```json
+  {
+    "status": "ok",
+    "service": "Pau Vilar starter kit"
+  }
+  ```
+</CodeGroup>
+
+If the app responds as expected, you have completed the first run. You can now adapt the sample config to your own project name, routes, and data source.
+
+## Local development basics
+
+Use the local environment to test changes quickly before you publish anything.
+
+<Tabs>
+  <Tab title="Local server" icon="monitor">
+    Run the app locally and watch the browser update as you edit files.
+
+    ````bash
+    npm run dev
+    ````
+  </Tab>
+  <Tab title="Build check" icon="check-circle">
+    Confirm that production output compiles without errors.
+
+    ````bash
+    npm run build
+    ````
+  </Tab>
+  <Tab title="Preview" icon="eye">
+    Inspect the built output before deployment if your tooling supports a preview command.
+
+    ````bash
+    npm run preview
+    ````
+  </Tab>
+</Tabs>
+
+## Common setup issues
+
+A few issues appear often during the first setup. Most of them are easy to fix once you know where to look.
+
+<ExpandableGroup>
+  <Expandable title="The app does not start" default-open="true">
+    
+    Check that dependencies installed correctly and that no other service is using the same port. If needed, stop the conflicting process and restart the server.
+    
+  </Expandable>
+  <Expandable title="Environment variables are missing" default-open="false">
+    
+    Verify that `.env.local` exists and that the variable names match the ones expected by your app. Keep values in plain text only for local development.
+    
+  </Expandable>
+  <Expandable title="The build fails" default-open="false">
+    
+    Look for TypeScript errors, missing imports, or unsupported package versions. Run the build command again after you fix the reported issue.
+    
+  </Expandable>
+</ExpandableGroup>
+
+## Next steps
+
+After you finish the setup, customize the starter kit for your own workflow. Common next steps include connecting your real API, replacing sample copy with your product language, and adding a deployment pipeline.
+
+<Columns cols={2}>
+  <Card title="Configuration" icon="settings" href="#setup" horizontal>
+    Adjust environment variables, defaults, and local settings for your project.
+  </Card>
+  <Card title="Troubleshooting" icon="alert-triangle" href="#common-setup-issues" horizontal>
+    Review the most common setup problems and fix them quickly.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+Keep your first iteration small. A working local setup is more valuable than a perfect configuration on day one.
+</Callout>

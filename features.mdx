@@ -1,0 +1,200 @@
+---
+title: Core Features
+description: Explore the main capabilities of the product and the workflows they support. Use this guide to understand the primary things you can do and how the system is organized.
+---
+
+## Overview
+
+Pau Vilar is a starter-kit documentation space that helps you describe the product features, the main workflows, and the common ways people use the system. This page gives you a practical overview you can customize for your own project while keeping the structure easy to scan.
+
+Use this guide when you want to explain what users can do, how the system is organized, and which capabilities matter most in day-to-day work.
+
+<Callout kind="info">
+This is sample documentation for a starter kit. Adapt the examples, terms, and workflows to match your product before publishing.
+</Callout>
+
+## Core capabilities
+
+<Columns cols={3}>
+  <Card title="Workflow overview" icon="arrow-right" href="#main-workflows">
+    
+Learn how users move through the product from setup to ongoing use.
+
+  </Card>
+  <Card title="Key features" icon="zap" href="#key-capabilities">
+    
+Describe the features users rely on most and why they matter.
+
+  </Card>
+  <Card title="Usage patterns" icon="users" href="#typical-usage-patterns">
+    
+Show the most common ways teams configure and use the product.
+
+  </Card>
+</Columns>
+
+### Main workflows
+
+Most products benefit from a small set of repeatable workflows. In Pau Vilar, you can present those workflows in a clear order so readers understand the path from first login to regular use.
+
+<Steps>
+  <Step title="Discover the workspace" icon="book-open">
+    
+Start by introducing the dashboard, navigation, and the main areas users will interact with.
+
+  </Step>
+  <Step title="Configure the essentials" icon="settings">
+    
+Explain the settings users need before they can complete their first task, such as access, sources, or preferences.
+
+  </Step>
+  <Step title="Run the primary action" icon="rocket">
+    
+Show the core action your users repeat most often, such as creating a report, syncing data, or publishing content.
+
+  </Step>
+  <Step title="Review results" icon="bar-chart">
+    
+Describe how users validate outcomes, check status, and iterate based on the output.
+
+  </Step>
+</Steps>
+
+### Key capabilities
+
+<CodeGroup tabs="JavaScript,Python,cURL">
+  ```javascript
+  const response = await fetch("https://api.example.com/workflows", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer YOUR_API_TOKEN"
+    },
+    body: JSON.stringify({
+      name: "Monthly report",
+      source: "sales",
+      refresh: "daily"
+    })
+  });
+
+  const data = await response.json();
+  console.log(data.status);
+  ```
+
+  ```python
+  import requests
+
+  response = requests.post(
+      "https://api.example.com/workflows",
+      headers={
+          "Content-Type": "application/json",
+          "Authorization": "Bearer YOUR_API_TOKEN"
+      },
+      json={
+          "name": "Monthly report",
+          "source": "sales",
+          "refresh": "daily"
+      }
+  )
+
+  print(response.json()["status"])
+  ```
+
+  ```bash
+  curl -X POST "https://api.example.com/workflows" \
+    -H "Content-Type: application/json" \
+    -H "Authorization: Bearer YOUR_API_TOKEN" \
+    -d '{
+      "name": "Monthly report",
+      "source": "sales",
+      "refresh": "daily"
+    }'
+  ```
+</CodeGroup>
+
+The example above shows a realistic workflow payload you can adapt. You can replace the endpoint, fields, and authentication scheme to match your own implementation while keeping the same pattern.
+
+<Tabs>
+  <Tab title="New users" icon="users">
+    
+New users usually need a simple path: create an account, connect one source, and run one workflow before exploring advanced options.
+
+  </Tab>
+  <Tab title="Teams" icon="shield">
+    
+Teams often need permissions, shared configurations, and audit-friendly defaults so multiple people can work safely.
+
+  </Tab>
+  <Tab title="Power users" icon="code">
+    
+Power users typically want automation, reusable templates, and API access so they can scale repeatable tasks.
+
+  </Tab>
+</Tabs>
+
+## Typical usage patterns
+
+When you document usage patterns, focus on what people do repeatedly. That makes the guide easier to maintain and easier for readers to apply in real situations.
+
+### Example scenarios
+
+<Columns cols={2}>
+  <Card title="Launch a new project" icon="rocket" href="#main-workflows">
+    
+Use this pattern when a team needs to go from setup to first value quickly.
+
+  </Card>
+  <Card title="Scale an existing process" icon="trending-up" href="#key-capabilities">
+    
+Use this pattern when the product is already live and you want to expand usage across a team.
+
+  </Card>
+  <Card title="Automate routine tasks" icon="settings" href="#typical-usage-patterns">
+    
+Use this pattern when users repeat the same steps and benefit from automation.
+
+  </Card>
+  <Card title="Validate output quality" icon="check-circle" href="#main-workflows">
+    
+Use this pattern when accuracy, review, or approvals are part of the workflow.
+
+  </Card>
+</Columns>
+
+### User-facing features
+
+| Feature | What it helps you do | Typical use |
+|---------|----------------------|-------------|
+| Dashboard | See the current state at a glance | Daily monitoring |
+| Workflow builder | Organize repeatable steps | Operational setup |
+| API access | Integrate with other tools | Automation and sync |
+| Activity history | Review what happened and when | Auditing and support |
+
+<Callout kind="tip">
+Keep each feature description outcome-focused. Readers care more about what they can achieve than about internal implementation details.
+</Callout>
+
+## Implementation notes
+
+The best feature guides stay concise, practical, and scenario-driven. You can describe the system in layers: first the main workflow, then the supporting capabilities, and finally the specific user-facing features that make the product useful.
+
+<Expandable title="What should you customize first?" default-open="true">
+  
+Start with the workflow names, update the feature list, and replace the sample code with your real API shape or UI actions. Then adjust the examples to match the terminology your users already know.
+
+</Expandable>
+
+<Expandable title="How should you organize feature pages?" default-open="false">
+  
+A useful structure is overview, core capabilities, example scenarios, and reference details. That order helps readers understand the product before they get into specifics.
+
+</Expandable>
+
+## Next steps
+
+You can use this page as a template for describing feature depth without making the documentation feel overwhelming. If you need a more focused guide, split the content into separate pages for setup, authentication, automation, or API reference.
+
+1. Replace the sample workflow names with your real product terms.
+2. Add screenshots or diagrams if your product has a visual interface.
+3. Link each feature to a deeper guide or tutorial.
+4. Keep the examples short enough that readers can copy and adapt them quickly.
